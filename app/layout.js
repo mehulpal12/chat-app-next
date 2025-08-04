@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import SmoothScroll from "../components/SmoothScroll";
 import CustomCursor from '../components/CustomCursor';
+import Navbar from '../components/Navbar';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           </header> */}
           <SmoothScroll/>
           <CustomCursor/>
+          <Navbar/>
           {children}
         </body>
       </html>

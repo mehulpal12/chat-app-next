@@ -1,30 +1,36 @@
 import React from 'react'
-
+import { Button } from "@/components/ui/button"
+import Link from 'next/link';
 const topics = [
   {
     text: "Web Development",
     img: "https://miro.medium.com/v2/resize:fit:1200/format:webp/1*O1sCklR9yHOnh9N82fqLzQ.jpeg",
-    desc: "Discuss MERN stack development (MongoDB, Express.js, React, Node.js)"
+    desc: "Discuss MERN stack development (MongoDB, Express.js, React, Node.js)",
+    slug:"web-dev"
   },
   {
     text: "Frontend",
     img: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230312172249/Top-10-Frontend-Technologies-To-Learn-in-2023.png",
-    desc: "Explore React, Next.js, Tailwind CSS, and modern UI frameworks"
+    desc: "Explore React, Next.js, Tailwind CSS, and modern UI frameworks",
+    slug:"front-dev"
   },
   {
     text: "Backend",
     img: "https://miro.medium.com/v2/resize:fit:1200/format:webp/1*PMSpV7YP7rC4Y6vZt5MEyQ.png",
-    desc: "Dive into server-side logic, APIs, databases, and authentication"
+    desc: "Dive into server-side logic, APIs, databases, and authentication",
+    slug:"back-dev"
   },
   {
     text: "DevOps",
     img: "https://www.redswitches.com/wp-content/uploads/2023/08/DevOps-Roles-and-Responsibilities.webp",
-    desc: "Learn CI/CD, Docker, Kubernetes, cloud hosting, and deployments"
+    desc: "Learn CI/CD, Docker, Kubernetes, cloud hosting, and deployments",
+    slug:"devops"
   },
   {
     text: "UI/UX Design",
     img: "https://www.springboard.com/blog/wp-content/uploads/2022/06/ui-vs-ux-1.png",
-    desc: "Understand user experience, design principles, and wireframing tools"
+    desc: "Understand user experience, design principles, and wireframing tools",
+    slug:"ux-dev"
   },
   // {
   //   text: "Data Structures & Algorithms",
@@ -37,7 +43,7 @@ const page = () => {
   return (
     <>
     <div className='container mx-auto'>
-      
+      <h1 className='text-center text-6xl'>Discuss forum</h1>
       <div className='flex flex-wrap justify-center'>
         {topics.map((topic, index)=>{
      return(
@@ -53,7 +59,9 @@ const page = () => {
     <h2 className="card-title">{topic.text}</h2>
     <p>{topic.desc}</p>
     <div className="card-actions">
-      <button className="btn btn-active btn-info">Buy Now</button>
+      <Link href={`/forum/${topic.slug}`} >
+      <Button className="btn btn-active btn-info">Buy Now</Button>
+      </Link>
     </div>
   </div>
 </div>

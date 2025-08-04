@@ -6,64 +6,40 @@ import Link from "next/link";
 export default function ChatAppHomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
-        {/* navbar  */}
-<div className=' text-white shadow-md py-4 px-32 flex justify-between items-center'>
-      <Link href="/" className="text-2xl  font-bold ">
-        home
-      </Link>
+ 
+    {/* //   Header
+    //   <header className="container mx-auto px-6 py-4">
+    //     <nav className="flex items-center justify-between">
+    //       <div className="flex items-center space-x-2">
+    //         <MessageCircle className="h-8 w-8 text-cyan-400" />
+    //         <span className="text-2xl font-bold">ChatFlow</span>
+    //       </div>
+    //       <div className="hidden md:flex space-x-8">
+    //         <Link href="#features" className="hover:text-cyan-400 transition-colors">home</Link>
+    //         <Link href="#features" className="hover:text-cyan-400 transition-colors">about</Link>
+    //         <Link href="/forum" className="hover:text-cyan-400 transition-colors">forum</Link>
+    //         <Link href="/chat" className="hover:text-cyan-400 transition-colors">userchat</Link>
+    //         <Link href="#pricing" className="hover:text-cyan-400 transition-colors">Pricing</Link>
+    //         <SignedOut>
+    //       <SignInButton mode="modal">
+    //         <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    //           Sign In
+    //         </button>
+    //       </SignInButton>
 
-      {/* Navigation Links */}
-      <div className="flex gap-4 items-center">
-        <Link href="/home" className="">
-          Home
-        </Link>
-        <Link href="/about" className="">
-          about
-        </Link>
+    //       <SignUpButton mode="modal">
+    //         <button className="ml-2 border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-50">
+    //           Sign Up
+    //         </button>
+    //       </SignUpButton>
+    //     </SignedOut>
 
-        <Link href="/forum" className="">
-          forum
-        </Link>
-        <Link href="/chat" className="">
-          UserChat
-        </Link>
-      </div>
-      
-        {/* Auth Buttons */}
-        <SignedOut>
-          <SignInButton mode="modal">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              Sign In
-            </button>
-          </SignInButton>
-
-          <SignUpButton mode="modal">
-            <button className="ml-2 border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-50">
-              Sign Up
-            </button>
-          </SignUpButton>
-        </SignedOut>
-
-        <SignedIn>
-          <UserButton afterSignOutUrl="/" />
-        </SignedIn>
-</div>
-      {/* Header */}
-      <header className="container mx-auto px-6 py-4">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <MessageCircle className="h-8 w-8 text-cyan-400" />
-            <span className="text-2xl font-bold">ChatFlow</span>
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#features" className="hover:text-cyan-400 transition-colors">Features</a>
-            <a href="#pricing" className="hover:text-cyan-400 transition-colors">Pricing</a>
-            <button className="bg-cyan-500 hover:bg-cyan-600 px-4 py-1 -pb-1 rounded-lg transition-colors">
-              Sign In
-            </button>
-          </div>
-        </nav>
-      </header>
+    //     <SignedIn>
+    //       <UserButton afterSignOutUrl="/" />
+    //     </SignedIn>
+    //       </div>
+    //     </nav>
+    //   </header> */}
 
       {/* Hero/Intro Section */}
       <section className="container mx-auto px-6 py-20 text-center">
